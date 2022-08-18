@@ -1,4 +1,5 @@
 = Enderman farm
+:navtitle: enderman farm
 
 == Location
 
