@@ -1,2 +1,2 @@
-.Farms
-* xref:enderman_farm.adoc[]
+* Farms
+** xref:enderman_farm.adoc[]
