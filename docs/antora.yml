@@ -1,0 +1,4 @@
+name: entropie-docs-source
+version: 0.1
+nav:
+- modules/farms/nav.adoc

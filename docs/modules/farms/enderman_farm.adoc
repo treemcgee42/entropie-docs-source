@@ -1,0 +1,12 @@
+= Enderman farm
+
+== Location
+
+This farm is in the `End`, at approximately `x: -341 y: 75 z:980`. To travel there from the main end island, go through the gateway at approximately `x: -30 y: 74 z: 89.5` (it has an `Ender Chest` on top of it). You should land right at the farm.
+
+== Notes
+
+* Not completely teleport-proof
+* No weapon at the farm
+** The recommended weapon to bring is a sword with `Sharpness V` and `Sweeping Edge III`.
+* To leave through the gateway, go to the pearl launcher (`x: -335 y: 1 z: 980`), face _away_ from the wall, look as high up as you can, and throw an `enderpearl`.
