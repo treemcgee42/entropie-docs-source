@@ -1,0 +1,3 @@
+= Entropie Documentation
+
+This exists for anyone who is not sure about where something is, how something works, etc. If you have any requests or suggestions, let `tree` know!
