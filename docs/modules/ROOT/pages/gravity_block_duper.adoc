@@ -1,0 +1,71 @@
+= Gravity block duper
+:navtitle: gravity block duper
+
+== Overview
+Use this farm if you want to dupe a full block that is affected by gravity, such as sand or concrete powder. This guide will also describe how to enable automatic concrete creation, since it is directly connected to the duping mechanism.
+
+Regardless of the block being duped, it is necessary to set up things in both the `Overworld` and `End`. The `Overworld` component is in a spawn chunk so it doesn't need to be explicitly loaded, but the `End` component needs to be loaded while in use, such as by a player standing by it.
+
+_Though this farm is technically able to handly any gravity block, it is currently not configured to handle (store) anything other than sand and concrete powder._
+
+== Overworld setup
+
+The `Overworld` component is housed in a tall, white building by spawn, whose entrance is at `x: 220, y: 69, z: -212`.
+
+Before entering, take a look on top of the building. If there is a beacon light coming out of it, then the component is currently configured to duplicate concrete powder, make it into concrete, and blow it up. If there is no beacon light, then it is configured for generic gravity block duplication. While it should be configured for generic gravity block duplication by default, you must verify this, as the previous user could have forgotten to restore the default setting.
+
+To change the mode (and also the beacon light), interact once with the `note block` at `x: 221, y: 80, z: -227`.
+
+If you want to dupe generic gravity blocks, then all you need to do is make sure the system is configured correctly (beacon light off). If you want to duplicate concrete powder _and_ convert it into concrete automatically, continue to the following subsection.
+
+=== Concrete configuration
+
+It is a good idea to take a schematic of the component before using it, given how many things can break. In particular, the stuff around `x: 232, y: 80, z: -217` is particularly prone to breaking (at least take a schematic of this part).
+
+First, you need to check that the four "observer-piston towers" are pushed down. Each has a `piston` on the bottom and on the top of the tower, and by "pushed down" we mean there is a gap between the top `piston` and the `observer` below it. The exact locations of these towers are as follows (we provide the location of the bottom `piston` of the tower):
+
+* `x: 217, y: 90, z: -215`
+* `x: 218, y: 80, z: -215`
+* `x: 230, y: 80, z: -215`
+* `x: 231, y: 89, z: -215`
+
+Next, you need to go check out the `slime blocks` at `x: 225, y: 80, z: -223` and `x: 223, y: 80, z: -222`. If there is a gravity block (from a previous duplication run) on top of these blocks, you need to destroy those (gravity) blocks (do not destroy the `slime block`s).
+
+If you have done these steps, you have properly configured the farm for `concrete powder` duplication and subsequent `concrete` conversion.
+
+== End setup
+
+The `End` setup is relatively simple. Be sure to bring 20 of the blocks you wish to duplicate (`concrete powder` if you want to make concrete). The configuration in the `End` is the same whether you are doing `concrete` or generic gravity block duplication.
+
+Head to the main central portal back to the `Overworld`, and place the blocks you want to duplicate around it. Precise locations are (if it isn't clear)
+
+```
+[{x: -4, y: 61, z: -1}, {x: -4, y: 61, z: 0}, {x: -4, y: 61, z: 1}, {x: -3, y: 61, z: 2}, {x: -2, y: 61, z: 3}, {x: -1, y: 61, z: 4}, {x: 0, y: 61, z: 4}, {x: 1, y: 61, z: 4}, {x: 2, y: 61, z: 3}, {x: 3, y: 61, z: 2}, {x: 4, y: 61, z: 1}, {x: 4, y: 61, z: 0}, {x: 4, y: 61, z: -1}, {x: 3, y: 61, z: -2}, {x: 2, y: 61, z: -3}, {x: 1, y: 61, z: -4}, {x: 0, y: 61, z: -4}, {x: -1, y: 61, z: -4}, {x: -2, y: 61, z: -3}, {x: -3, y: 61, z: -2}]
+```
+
+There may be gravity blocks already there from a previous duplication run. You can just remove those and put your own if you like.
+
+== Usage
+
+Once you have configured everything, you can activate the duper by pressing the button at `x: -8, y: 63, z: 0`. The end chunk with the duper must remain loaded, so either you or someone else must stay there while in operation. The same button will stop the farm.
+
+If you are duplicating concrete powder, they need not all be the same color, regardless of if you are duping powder or also converting it to concrete.
+
+Read the next section to see where to pick up your items.
+
+== Item storage
+
+Every block is packed into shulker boxes before they are sent to storage and are accessible. 
+
+Sand and concrete will be sent to the Bauhaus, at approximately `x: 140, y: 69, z: -272`. 
+
+* Todo: include info on how to refill shulker boxes
+
+Concrete will be sent to the ship. Stand at `x: 181, y: 76, z: -132` and press the button to go down. Take what you need from the corresponding chests. To get out, face the wall while standing at `x: 183, y: 68, z: -132`, look straight up, and throw an ender pearl. 
+
+To refill shulker boxes for this concrete storage, add shulker boxes to the chest at around `x: 180, y: 69, z: -212`. 
+
+== Additional notes
+
+* In the overworld component, when blowing up concrete, don't be surprised if the first batch of concrete powder falls through as items.
+* Try to check with freecam inside the blast chambers while blowing concrete up, just to make sure everything is working properly.

@@ -1,2 +1,3 @@
 * Farms
 ** xref:enderman_farm.adoc[]
+** xref:gravity_block_duper.adoc[]
